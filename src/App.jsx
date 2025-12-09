@@ -5,6 +5,7 @@ import Themes from './components/Themes';
 import FeeTable from './components/FeeTable';
 import Committee from './components/Committee';
 import Footer from './components/Footer';
+import Timeline from './components/Timeline';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <Themes />
       <FeeTable />
+      <Timeline />
       <Committee />
       <Footer />
     </div>
