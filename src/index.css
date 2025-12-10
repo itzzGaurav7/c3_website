@@ -42,8 +42,8 @@ body {
 }
 
 /* -------------------------------------------
-   GLASS PANEL — crisp, premium style
--------------------------------------------- */
+    GLASS PANEL — crisp, premium style
+  -------------------------------------------- */
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(14px);
@@ -53,8 +53,8 @@ body {
 }
 
 /* -------------------------------------------
-   GLASS CARD — fast, responsive, elegant
--------------------------------------------- */
+    GLASS CARD — fast, responsive, elegant
+  -------------------------------------------- */
 .glass-card {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(10px);
@@ -79,8 +79,8 @@ body {
 }
 
 /* -------------------------------------------
-   SMOOTHER, MORE ELEGANT BLOB ANIMATION
--------------------------------------------- */
+    SMOOTHER, MORE ELEGANT BLOB ANIMATION
+  -------------------------------------------- */
 @keyframes blob {
   0% {
     transform: translate(0, 0) scale(1);
@@ -108,8 +108,8 @@ body {
 }
 
 /* -------------------------------------------
-   CINEMATIC UI ENTRANCE
--------------------------------------------- */
+    CINEMATIC UI ENTRANCE
+  -------------------------------------------- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
