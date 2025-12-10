@@ -1,11 +1,12 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Themes from './components/Themes';
-import FeeTable from './components/FeeTable';
-import Committee from './components/Committee';
-import Footer from './components/Footer';
-import Timeline from './components/Timeline';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Themes from "./components/Themes";
+import FeeTable from "./components/FeeTable";
+import Committee from "./components/Committee";
+import Footer from "./components/Footer";
+import Timeline from "./components/Timeline";
+import Submission from "./components/Submission";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <Themes />
+      <Submission />
       <FeeTable />
       <Timeline />
       <Committee />
