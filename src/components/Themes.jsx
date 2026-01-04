@@ -52,84 +52,80 @@ const tracks = [
   },
 ];
 
-const ThemeCard = ({ data }) => (
-  <div className="glass-card group relative p-6 rounded-2xl flex flex-col h-full hover:bg-white/60">
+const ThemeCard = ({ data, idx }) => (
+  <div className="glass-card group relative p-8 rounded-3xl flex flex-col h-full hover:bg-white/80 border border-slate-200 hover:border-grn-200/50 transition-all duration-300">
     
-    {/* Decorative Background Blob on Hover */}
-    <div className="absolute -right-4 -top-4 w-24 h-24 bg-ind-200/40 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
+    {/* Decorative Background Blob on Hover (Alternating Colors) */}
+    <div className={`absolute -right-4 -top-4 w-32 h-32 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700 pointer-events-none opacity-0 group-hover:opacity-40
+      ${idx % 2 === 0 ? 'bg-saf-200' : 'bg-grn-200'}
+    `}></div>
 
     {/* Header: Icon & ID */}
-    <div className="flex justify-between items-start mb-6 relative z-10">
-      <div className="p-3 rounded-xl bg-white border border-white/60 shadow-sm text-slate-600 group-hover:bg-ind-500 group-hover:text-white group-hover:border-ind-400 transition-all duration-300">
-        <data.icon size={24} strokeWidth={1.5} />
+    <div className="flex justify-between items-start mb-8 relative z-10">
+      <div className={`p-4 rounded-2xl bg-white border border-slate-100 shadow-sm text-slate-600 transition-all duration-300
+        ${idx % 2 === 0 ? 'group-hover:bg-saf-500 group-hover:text-white group-hover:border-saf-400' : 'group-hover:bg-grn-500 group-hover:text-white group-hover:border-grn-400'}
+      `}>
+        <data.icon size={28} strokeWidth={1.5} />
       </div>
-      <span className="font-mono text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded border border-slate-200 group-hover:border-ind-200 group-hover:text-ind-700 transition-colors">
+      <span className={`font-mono text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors
+         ${idx % 2 === 0 
+           ? 'bg-saf-50 text-saf-700 border-saf-100 group-hover:border-saf-200' 
+           : 'bg-grn-50 text-grn-700 border-grn-100 group-hover:border-grn-200'}
+      `}>
         {data.id}
       </span>
     </div>
 
     {/* Title */}
-    <h3 className="font-tech text-xl font-bold text-slate-900 mb-3 group-hover:text-ind-800 transition-colors">
+    <h3 className="font-tech text-2xl font-bold text-slate-900 mb-4 group-hover:text-blu-900 transition-colors">
       {data.title}
     </h3>
 
-    {/* Divider */}
-    <div className="h-px w-12 bg-slate-300 mb-4 group-hover:w-full group-hover:bg-ind-200 transition-all duration-500"></div>
-
-    {/* Sub-topics */}
-    <ul className="space-y-2 mb-4 flex-1">
-      {data.topics.map((topic, i) => (
-        <li key={i} className="flex items-center gap-2 text-sm text-slate-500 group-hover:text-slate-700 transition-colors">
-          <span className="w-1 h-1 rounded-full bg-ind-400"></span>
-          {topic}
-        </li>
-      ))}
-    </ul>
-
-    {/* Hover Action */}
-    {/* <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-ind-600 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-      Explore Track <ArrowUpRight size={14} />
-    </div> */}
   </div>
 );
 
 const Themes = () => {
   return (
-    <section id="themes" className="py-32 relative bg-slate-50/50">
+    <section id="themes" className="py-20 md:py-32 relative bg-slate-50">
       {/* Background Tech Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="mb-16 md:flex justify-between items-end border-b border-slate-200/60 pb-6">
+        <div className="mb-16 md:flex justify-between items-end border-b border-slate-200/60 pb-8">
            <div>
-             <span className="text-ind-600 font-bold tracking-widest text-xs uppercase mb-2 block font-mono">
+             <span className="text-grn-600 font-bold tracking-widest text-sm uppercase mb-3 block font-mono">
                // Scientific_Program
              </span>
-             <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900">
+             <h2 className="font-tech text-4xl md:text-6xl font-bold text-blu-950 tracking-tight">
                Thematic Areas
              </h2>
            </div>
            
-           <div className="mt-6 md:mt-0 hidden md:flex items-center gap-2 text-sm text-slate-500">
-             <Microscope size={18} className="text-ind-500" />
+           <div className="mt-8 md:mt-0 hidden md:flex items-center gap-3 text-base text-slate-600 font-medium">
+             <div className="p-2 bg-white border border-slate-200 rounded-lg shadow-sm">
+                <Microscope size={24} className="text-saf-600" />
+             </div>
              <span>Interdisciplinary Material Science</span>
            </div>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {tracks.map((track, i) => (
-            <ThemeCard key={i} data={track} />
+            <ThemeCard key={i} data={track} idx={i} />
           ))}
         </div>
 
         {/* Bottom Note */}
-        <div className="mt-12 text-center">
-          <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-sm text-slate-500 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            Accepting papers on <span className="font-bold text-slate-700">Forensic Materials</span> and <span className="font-bold text-slate-700">Any other relevant topics</span>
+        <div className="mt-16 text-center">
+          <p className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-slate-200 text-base text-slate-600 shadow-sm hover:shadow-md transition-shadow">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-grn-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-grn-500"></span>
+            </span>
+            Accepting papers on <span className="font-bold text-blu-900">Forensic Materials</span> and <span className="font-bold text-blu-900">Any other relevant topics</span>
           </p>
         </div>
 

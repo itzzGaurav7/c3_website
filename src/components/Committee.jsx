@@ -5,15 +5,15 @@ const PersonCard = ({ name, role, desc, phone, image, isLead }) => (
   <div
     className={`p-4 transition-all rounded-xl flex gap-4 items-start ${
       isLead
-        ? "bg-gradient-to-r from-ind-900 to-ind-800 border border-ind-700 text-white shadow-lg"
-        : "bg-white/50 backdrop-blur-md border border-slate-200 hover:border-ind-400"
+        ? "bg-saf-900 border border-saf-700 text-white shadow-lg"
+        : "bg-white/50 backdrop-blur-md border border-slate-200 hover:border-saf-400"
     }`}
   >
     {/* LEFT TEXT */}
     <div className="flex-1">
       <div
         className={`text-[9px] uppercase tracking-widest font-bold mb-1 ${
-          isLead ? "text-ind-300" : "text-ind-600"
+          isLead ? "text-saf-300" : "text-saf-600"
         }`}
       >
         {role}
@@ -30,7 +30,7 @@ const PersonCard = ({ name, role, desc, phone, image, isLead }) => (
       {desc && (
         <p
           className={`text-xs leading-relaxed ${
-            isLead ? "text-ind-200" : "text-slate-600"
+            isLead ? "text-saf-200" : "text-slate-600"
           }`}
         >
           {desc}
@@ -41,14 +41,14 @@ const PersonCard = ({ name, role, desc, phone, image, isLead }) => (
         <div className="mt-3 flex items-center gap-2">
           <PhoneCall
             size={12}
-            className={isLead ? "text-ind-300" : "text-ind-500"}
+            className={isLead ? "text-saf-300" : "text-saf-500"}
           />
           <a
             href={`tel:${phone}`}
             className={`text-xs ${
               isLead
-                ? "text-ind-200 hover:text-white"
-                : "text-slate-600 hover:text-ind-600"
+                ? "text-saf-200 hover:text-white"
+                : "text-slate-600 hover:text-saf-600"
             }`}
           >
             {phone}
@@ -60,7 +60,7 @@ const PersonCard = ({ name, role, desc, phone, image, isLead }) => (
     {/* RIGHT IMAGE */}
     <div
       className={`w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 ${
-        isLead ? "ring-2 ring-ind-400" : ""
+        isLead ? "ring-2 ring-saf-400" : ""
       }`}
     >
       <img
@@ -76,14 +76,14 @@ const Committee = () => {
   return (
     <section
       id="committee"
-      className="py-24 bg-gradient-to-b from-slate-50 to-white"
+      className="py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 fade-in-up">
           <h2 className="font-tech text-4xl font-bold text-slate-900 mb-3">
             Organizing Committee
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-ind-500 to-ind-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-saf-600 mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-12">
@@ -103,11 +103,11 @@ const Committee = () => {
           {/* Patrons and Chairpersons */}
           <div className="fade-in-up">
             <div className="mb-6 flex items-center gap-3">
-              <div className="h-px bg-gradient-to-r from-transparent via-ind-300 to-transparent flex-1"></div>
+              <div className="h-px bg-slate-200 flex-1"></div>
               <h3 className="font-tech text-sm font-bold text-slate-700 uppercase tracking-wider">
                 Patrons & Chairpersons
               </h3>
-              <div className="h-px bg-gradient-to-r from-transparent via-ind-300 to-transparent flex-1"></div>
+              <div className="h-px bg-slate-200 flex-1"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
@@ -136,12 +136,6 @@ const Committee = () => {
                 image="/uploads/uma.jpg"
               />
               <PersonCard
-                name="Dr Dalila Hammiche"
-                role="Chairperson"
-                desc="University Abderrahmane Mira-Béjaïa, Algeria"
-                image="/uploads/dalila.jpg"
-              />
-              <PersonCard
                 name="Prof. Ajay Bansal"
                 role="Chairperson"
                 desc="Department of Chemical Engineering, NITJ"
@@ -153,11 +147,11 @@ const Committee = () => {
           {/* Organizing Secretaries */}
           <div className="fade-in-up">
             <div className="mb-6 flex items-center gap-3">
-              <div className="h-px bg-gradient-to-r from-transparent via-ind-400 to-transparent flex-1"></div>
+              <div className="h-px bg-slate-200 flex-1"></div>
               <h3 className="font-tech text-sm font-bold text-slate-700 uppercase tracking-wider">
                 Organizing Secretaries
               </h3>
-              <div className="h-px bg-gradient-to-r from-transparent via-ind-400 to-transparent flex-1"></div>
+              <div className="h-px bg-slate-200 flex-1"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
@@ -189,6 +183,44 @@ const Committee = () => {
                 phone="9459805657"
                 image="/uploads/manisha.jpg"
               />
+            </div>
+          </div>
+
+          {/* International Advisory Committee */}
+          <div className="fade-in-up pt-12">
+            <div className="mb-8 text-center">
+              <h3 className="font-tech text-2xl font-bold text-slate-800">
+                International Advisory Committee
+              </h3>
+              <div className="w-16 h-1 bg-saf-200 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+               {[
+                 "Prof. Rodrigue Denis, Université Laval, Canada",
+                 "Prof. Rumeau-Duchet Jannick, INSA de Lyon, France",
+                 "Prof. Munish Kumar Gupta, Opole University of Technology, Poland",
+                 "Dr. Manish Singh, State University of New York, USA",
+                 "Dr. Prince Ravat, University of Würzburg, Germany",
+                 "Prof. Barbara Zajc, CUNY, USA",
+                 "Prof. Sanjay Mandal, IISER Mohali, India",
+                 "Prof. S. K. Mehta, PU, Chandigarh, India",
+                 "Prof. M. R. Maurya, IIT Roorkee, India",
+                 "Prof. Shishir Sinha, Director General, CIPET India",
+                 "Prof. Venkata Krishnan, IIT Mandi, India",
+                 "Dr. Shubhankar Bose, Jain University Bangalore, India",
+                 "Dr. Geetharani K., Indian Institute of Science Bangalore, India",
+                 "Dr. Shaibal Banerjee, DIAT Pune, India",
+                 "Prof. V. C. Srivastava, IIT Roorkee, India",
+                 "Prof. K. R. Justin Thomas, IIT Roorkee, India",
+                 "Prof. Ramesh Chandra, IIT Roorkee, India",
+                 "Prof. Ahmad H. Bandegharaei, Semnan University, Iran"
+               ].map((member, i) => (
+                 <div key={i} className="flex items-start gap-2 text-sm text-slate-700 py-2 border-b border-slate-100 last:border-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-saf-400 mt-2 shrink-0"></span>
+                    <span>{member}</span>
+                 </div>
+               ))}
             </div>
           </div>
         </div>

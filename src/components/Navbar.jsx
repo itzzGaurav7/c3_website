@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -9,139 +10,165 @@ import {
   Users,
   CreditCard,
   ArrowUpRight,
+  Mic2,
+  Trophy,
+  MapPin,
 } from "lucide-react";
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState(null);
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState(location.pathname);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  useEffect(() => {
+    setActiveTab(location.pathname);
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [location]);
+
   const navLinks = [
-    { id: "about", name: "Conference", icon: CalendarDays },
-    { id: "themes", name: "Tracks", icon: Layers },
-    { id: "fees", name: "Registration", icon: CreditCard },
-    { id: "committee", name: "Committee", icon: Users },
+    { path: "/", name: "Home", icon: CalendarDays },
+    { path: "/tracks", name: "Tracks", icon: Layers },
+    { path: "/speakers", name: "Speakers", icon: Mic2 },
+    { path: "/registration", name: "Fees", icon: CreditCard },
+    { path: "/committee", name: "Team", icon: Users },
+    { path: "/awards", name: "Awards", icon: Trophy },
+    { path: "/reach", name: "Reach", icon: MapPin },
   ];
 
   return (
     <>
-      {/* Desktop Navbar */}
-      <div className="fixed top-8 left-0 right-0 z-50 hidden lg:flex justify-center px-6 pointer-events-none">
-        <div className="pointer-events-auto glass-panel rounded-full flex items-center p-1.5 gap-2 ring-1 ring-black/5">
-          {/* Brand */}
-          <div className="pl-5 pr-6 flex items-center gap-3 border-r border-slate-200/50">
-            <Hexagon className="text-ind-600" size={28} />
-            <div className="flex flex-col leading-none">
-              <span className="font-tech font-bold text-ind-800 tracking-tight text-lg">
-                C³–26
-              </span>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex items-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onMouseEnter={() => setActiveTab(link.id)}
-                onMouseLeave={() => setActiveTab(null)}
-                className="relative px-5 py-2.5 rounded-full text-sm font-medium text-slate-500 hover:text-ind-900 transition-colors flex items-center gap-2 group"
-              >
-                {activeTab === link.id && (
-                  <motion.div
-                    layoutId="nav-pill"
-                    className="absolute inset-0 bg-white shadow-sm border border-slate-100 rounded-full"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-
-                <span className="relative z-10 flex items-center gap-2">
-                  <link.icon
-                    size={16}
-                    className={`transition-all duration-300 ${
-                      activeTab === link.id
-                        ? "text-ind-600 scale-110"
-                        : "opacity-70 group-hover:opacity-100"
-                    }`}
-                  />
-                  {link.name}
-                </span>
-              </a>
-            ))}
-          </nav>
-
-          {/* Submit Abstract Button - Desktop */}
-          <div className="pl-2">
-            <a
-              href="#submission"
-              className="group relative flex items-center gap-2 bg-ind-600 text-white px-6 py-3 rounded-full font-tech text-sm font-bold overflow-hidden shadow-lg shadow-ind-500/30 hover:shadow-ind-500/50 transition-all hover:scale-105 active:scale-95"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
-              <span className="relative z-10">Submit Abstract</span>
-              <ArrowUpRight size={16} className="relative z-10" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navbar Header */}
-      <div className="lg:hidden fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-ind-900 rounded flex items-center justify-center text-white">
-            <Hexagon size={18} />
-          </div>
-          <span className="font-tech font-bold text-lg">C³–26</span>
-        </div>
-
-        <button
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="p-2 bg-slate-100 rounded-lg"
-        >
-          {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-x-0 top-16 z-40 bg-white border-b border-slate-200 shadow-xl lg:hidden"
-          >
-            <div className="p-4 space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={`#${link.id}`}
-                  onClick={() => setIsMobileOpen(false)}
-                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-ind-50 text-slate-700 font-medium"
-                >
-                  <div className="p-2 bg-white border border-slate-200 rounded text-ind-600">
-                    <link.icon size={16} />
+            {/* Navbar Container */}
+            <div className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 supports-[backdrop-filter]:bg-white/60">
+              
+              {/* Top Accent Line */}
+              <div className="h-1 w-full bg-saf-600"></div>
+      
+              <div className="max-w-7xl mx-auto px-4 md:px-6">
+                <div className="flex items-center justify-between h-20">
+                  
+                  {/* Brand */}
+                  <Link to="/" className="flex items-center gap-3 group">
+                    <div className="p-2.5 bg-saf-50 rounded-xl border border-saf-100 group-hover:bg-saf-600 group-hover:border-saf-600 transition-all duration-300">
+                      <Hexagon className="text-saf-600 group-hover:text-white transition-colors duration-300" size={24} strokeWidth={2.5} />
+                    </div>
+                    <div className="flex flex-col leading-none">
+                      <span className="font-tech font-bold text-slate-900 tracking-tight text-xl md:text-2xl group-hover:text-saf-700 transition-colors">
+                        C³–26
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 font-mono group-hover:text-grn-600 transition-colors">
+                        NIT Jalandhar
+                      </span>
+                    </div>
+                  </Link>
+      
+                  {/* Desktop Navigation */}
+                  <nav className="hidden lg:flex items-center gap-1 bg-slate-50/50 p-1.5 rounded-full border border-slate-100">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        onMouseEnter={() => setActiveTab(link.path)}
+                        onMouseLeave={() => setActiveTab(location.pathname)}
+                        className={`relative px-5 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide transition-all flex items-center gap-2 ${
+                          activeTab === link.path 
+                            ? "text-saf-700" 
+                            : "text-blu-900/70 hover:text-grn-700"
+                        }`}
+                      >
+                        {activeTab === link.path && (
+                          <motion.div
+                            layoutId="nav-pill"
+                            className="absolute inset-0 bg-white shadow-sm border border-slate-200/60 rounded-full"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                          />
+                        )}
+      
+                        <span className="relative z-10 flex items-center gap-2">
+                          <link.icon
+                            size={16}
+                            className={`transition-all duration-300 ${
+                              activeTab === link.path
+                                ? "text-saf-600"
+                                : "opacity-50 group-hover:opacity-100"
+                            }`}
+                          />
+                          {link.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </nav>
+      
+                  {/* Desktop Action & Mobile Toggle */}
+                  <div className="flex items-center gap-4">
+                    <Link
+                      to="/submission"
+                      className="hidden md:flex group relative items-center gap-2 bg-saf-600 text-white px-6 py-3 rounded-xl font-tech text-sm font-bold uppercase tracking-wider overflow-hidden shadow-lg shadow-saf-500/20 transition-all hover:scale-105 active:scale-95"
+                    >
+                      <span className="relative z-10">Submit Abstract</span>
+                      <ArrowUpRight size={16} className="relative z-10" />
+                    </Link>
+      
+                    <button
+                      onClick={() => setIsMobileOpen(!isMobileOpen)}
+                      className="lg:hidden p-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 hover:bg-saf-50 hover:text-saf-600 transition-colors"
+                    >
+                      {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                   </div>
-                  {link.name}
-                </a>
-              ))}
-
-              <div className="h-px bg-slate-100 my-2"></div>
-
-              {/* Mobile Submit Abstract Button */}
-              <a
-                href="#submission"
-                onClick={() => setIsMobileOpen(false)}
-                className="block w-full text-center bg-ind-900 text-white p-3 rounded-lg font-bold font-tech"
-              >
-                SUBMIT ABSTRACT
-              </a>
+      
+                </div>
+              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      
+            {/* Mobile Menu */}
+            <AnimatePresence>
+              {isMobileOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="fixed inset-x-0 top-20 z-40 bg-white border-b border-slate-200 shadow-xl lg:hidden overflow-hidden"
+                >
+                  <div className="p-4 space-y-2">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        onClick={() => setIsMobileOpen(false)}
+                        className={`flex items-center gap-4 p-4 rounded-xl font-bold text-lg transition-colors border ${
+                          location.pathname === link.path 
+                          ? "bg-saf-50 text-saf-700 border-saf-100" 
+                          : "bg-white text-blu-900 border-slate-100 hover:border-grn-200"
+                        }`}
+                      >
+                        <div className={`p-2 rounded-lg ${
+                           location.pathname === link.path 
+                           ? "bg-saf-100 text-saf-600" 
+                           : "bg-slate-50 text-slate-400"
+                        }`}>
+                          <link.icon size={20} />
+                        </div>
+                        {link.name}
+                      </Link>
+                    ))}
+      
+                    <div className="h-px bg-slate-100 my-4"></div>
+      
+                    {/* Mobile Submit Abstract Button */}
+                    <Link
+                      to="/submission"
+                      onClick={() => setIsMobileOpen(false)}
+                      className="block w-full text-center bg-saf-600 text-white p-4 rounded-xl font-bold font-tech text-base uppercase tracking-wide shadow-lg"
+                    >
+                      Submit Abstract
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
     </>
   );
 };
