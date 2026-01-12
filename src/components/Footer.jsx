@@ -19,8 +19,8 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3 text-white">
-              <div className="w-10 h-10 bg-saf-900 rounded-lg flex items-center justify-center border border-saf-500/30 shadow-lg p-2">
-                <img src="/uploads/logo.jpeg" alt="Logo" className="w-full h-full object-con  tain" />
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg p-2">
+                <img src="/uploads/logo.jpeg" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="font-tech text-2xl font-bold tracking-tight text-white">
