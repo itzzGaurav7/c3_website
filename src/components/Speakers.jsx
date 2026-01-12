@@ -33,9 +33,7 @@ const Speakers = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-20">
-          <span className="text-saf-600 font-bold tracking-widest text-sm uppercase mb-3 block font-mono">
-            // Keynote_Voices
-          </span>
+
           <h2 className="font-tech text-4xl md:text-6xl font-bold text-slate-900">
             Eminent Speakers
           </h2>

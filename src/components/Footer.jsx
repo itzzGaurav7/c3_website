@@ -19,15 +19,15 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3 text-white">
-              <div className="w-10 h-10 bg-saf-900 rounded-lg flex items-center justify-center border border-saf-500/30 shadow-lg">
-                <Hexagon size={20} className="text-saf-400" strokeWidth={2.5} />
+              <div className="w-10 h-10 bg-saf-900 rounded-lg flex items-center justify-center border border-saf-500/30 shadow-lg p-2">
+                <img src="/uploads/logo.jpeg" alt="Logo" className="w-full h-full object-con  tain" />
               </div>
               <div>
                 <h2 className="font-tech text-2xl font-bold tracking-tight text-white">
                   C³ – 2026
                 </h2>
                 <p className="text-[10px] text-saf-300 font-mono uppercase tracking-widest">
-                  System: Online
+                  Hybrid Mode
                 </p>
               </div>
             </div>
@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Organizers Column */}
           <div className="lg:col-span-4">
             <h4 className="text-white font-tech font-bold uppercase tracking-wider mb-6 text-sm">
-              Jointly Organized By
+                Organized By
             </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3 group">
@@ -51,15 +51,6 @@ const Footer = () => {
                     NIT Jalandhar
                   </p>
                   <p className="text-xs text-slate-500">Punjab, India</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 group">
-                <div className="w-1.5 h-1.5 mt-2 rounded-full bg-grn-500 group-hover:scale-150 transition-transform"></div>
-                <div>
-                  <p className="text-slate-200 font-medium group-hover:text-white transition-colors">
-                    Univ. Abderrahmane Mira
-                  </p>
-                  <p className="text-xs text-slate-500">Béjaïa, Algeria</p>
                 </div>
               </div>
             </div>
@@ -188,10 +179,10 @@ const Footer = () => {
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>&copy; 2026 Gaurav Upadhyay. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link to="/" className="hover:text-saf-400 transition-colors">
+            <Link to="/privacy" className="hover:text-saf-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/" className="hover:text-saf-400 transition-colors">
+            <Link to="/terms" className="hover:text-saf-400 transition-colors">
               Terms of Service
             </Link>
           </div>

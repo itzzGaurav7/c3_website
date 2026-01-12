@@ -90,23 +90,24 @@ const Hero = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-saf-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-saf-500"></span>
                 </span>
-                System Status: Registration Open
+                Hybrid Mode
               </div>
 
               <h1 className="font-tech text-5xl sm:text-6xl md:text-8xl font-bold text-slate-900 leading-[0.9] tracking-tighter mb-3">
+                <span className="text-2xl sm:text-3xl md:text-4xl block mb-2 text-slate-500 font-normal tracking-normal">International Conference on</span>
                 Chemical <br />
                 <span className="text-saf-600">Constellation</span>
               </h1>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-tech text-saf-700 tracking-tight mb-4 md:mb-6">
-                Cheminar 2026
+                Cheminar C³-2026
               </h2>
 
               <div className="h-1 w-20 md:w-24 bg-saf-600 mb-6 md:mb-8"></div>
 
               <p className="text-lg sm:text-xl text-slate-600 mb-8 md:mb-10 max-w-lg leading-relaxed font-light">
                 <span className="font-semibold text-slate-900 border-b-2 border-saf-200">
-                  Next Generation Materials for Energy and Environment
+                  Bridging the gap between molecular science and industrial application
                 </span>
               </p>
 
@@ -165,14 +166,14 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-saf-900/80 via-transparent to-transparent"></div>
 
                   <div className="absolute bottom-6 left-6 text-white">
-                    <div className="flex items-center gap-2 mb-1 opacity-80">
+                  <div className="flex items-center gap-2 mb-1 opacity-80">
                       <MapPin size={14} />
                       <span className="text-xs font-mono font-bold uppercase tracking-widest">
-                        Venue_01
+                        Hybrid Mode
                       </span>
                     </div>
                     <h3 className="font-serif text-2xl font-bold leading-tight">
-                      Dr BR Ambedkar
+                      Dr B R Ambedkar
                       <br />
                       National Institute of
                       <br />
@@ -200,12 +201,7 @@ const Hero = () => {
                   <div className="h-8 w-px bg-slate-200"></div>
 
                   <div className="text-right">
-                    <div className="flex items-center justify-end gap-1 text-slate-400 mb-0.5">
-                      <Sparkles size={10} className="text-amber-500" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest">
-                        Edition
-                      </span>
-                    </div>
+                   
                     <p className="text-xl font-bold text-slate-900 font-tech">
                       2026
                     </p>
@@ -221,9 +217,9 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -left-6 top-12 glass-panel p-3 rounded-2xl shadow-lg border border-white"
+                className="absolute -left-6 top-12 bg-white p-4 rounded-2xl shadow-lg border border-white"
               >
-                <Hexagon size={24} className="text-saf-500" strokeWidth={2} />
+                <img src="/uploads/logo.jpeg" alt="Logo" className="w-12 h-12 object-contain" />
               </motion.div>
             </motion.div>
           </div>

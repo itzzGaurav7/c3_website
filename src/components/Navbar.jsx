@@ -48,8 +48,8 @@ const Navbar = () => {
                   
                   {/* Brand */}
                   <Link to="/" className="flex items-center gap-3 group">
-                    <div className="p-2.5 bg-saf-50 rounded-xl border border-saf-100 group-hover:bg-saf-600 group-hover:border-saf-600 transition-all duration-300">
-                      <Hexagon className="text-saf-600 group-hover:text-white transition-colors duration-300" size={24} strokeWidth={2.5} />
+                    <div className="p-1 bg-white rounded-xl border border-slate-100 transition-all duration-300">
+                      <img src="/uploads/logo.jpeg" alt="Logo" className="w-12 h-12 object-contain" />
                     </div>
                     <div className="flex flex-col leading-none">
                       <span className="font-tech font-bold text-slate-900 tracking-tight text-xl md:text-2xl group-hover:text-saf-700 transition-colors">

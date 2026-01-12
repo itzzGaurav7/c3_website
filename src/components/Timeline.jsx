@@ -77,7 +77,7 @@ const TimelineItem = ({ evt, idx }) => {
 
           {/* Card Content */}
           <div className="flex items-start justify-between mb-2">
-            <span className={`px-3 py-1 rounded-md text-[10px] font-bold font-mono uppercase tracking-widest border
+            <span className={`px-4 py-1.5 rounded-lg text-base font-bold font-mono border
               ${evt.status === 'active' ? 'bg-saf-50 text-saf-700 border-saf-100' : 'bg-slate-50 text-slate-500 border-slate-100'}
             `}>
               {evt.date}

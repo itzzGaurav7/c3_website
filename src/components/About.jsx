@@ -20,7 +20,8 @@ const About = () => {
               <span>About Conference</span>
             </div>
             <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-              C³-2026: Bridging Science & Innovation
+              <span className="text-6xl md:text-7xl block mb-2">About the conference</span>
+              <span className="text-2xl md:text-3xl text-saf-600">C³-2026: Next Generation Materials for Energy and Environment</span>
             </h2>
             <div className="prose prose-lg text-slate-600 leading-relaxed text-justify">
               <p>
@@ -36,33 +37,27 @@ const About = () => {
                 collaborations with industries and academia through different
                 interactive sessions.
               </p>
-              <p>
-                Over the course of two days, participants and experts will present their
-                latest findings and future perspectives in the development of materials
-                for applications in environment, healthcare, energy, electronics, sensors,
-                textiles, defence, and other related areas.
-              </p>
             </div>
           </motion.div>
           
-          <div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl group">
-             <div className="absolute inset-0 bg-gradient-to-tr from-saf-900/40 to-transparent z-10"></div>
+          <div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden group">
              <img 
-               src="/uploads/3.jpg" 
+               src="/uploads/logo.jpeg" 
+               width={500}
+               height={500}
                alt="Conference Discussion" 
-               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 "
              />
           </div>
         </div>
 
         {/* About NIT Jalandhar */}
         <div className="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-          <div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl group order-2 md:order-1">
-             <div className="absolute inset-0 bg-gradient-to-bl from-saf-900/40 to-transparent z-10"></div>
+          <div className="relative h-full min-h-[400px] rounded-3xl overflow-hidden group order-2 md:order-1">
              <img 
                src="/uploads/nitj.jpg" 
                alt="NIT Jalandhar Campus" 
-               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 "
              />
           </div>
 

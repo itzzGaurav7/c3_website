@@ -120,12 +120,11 @@ const FeeTable = () => {
         </div>
 
         {/* Legend / Info */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8 text-base text-slate-600">
            <div className="flex gap-4 items-start group">
               <div className="mt-1 p-1.5 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors">
                  <CheckCircle2 size={18} />
               </div>
-              <p className="leading-relaxed">Registration includes access to all technical sessions, conference kit, and networking events.</p>
+              <p className="leading-relaxed">Registration includes access to all technical sessions and conference kit.</p>
            </div>
            <div className="flex gap-4 items-start group">
               <div className="mt-1 p-1.5 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors">
@@ -139,7 +138,6 @@ const FeeTable = () => {
               </div>
               <p className="leading-relaxed">On-spot registration is subject to availability and will incur higher charges.</p>
            </div>
-        </div>
 
       </div>
     </section>

@@ -105,7 +105,7 @@ const Committee = () => {
             <div className="mb-6 flex items-center gap-3">
               <div className="h-px bg-slate-200 flex-1"></div>
               <h3 className="font-tech text-sm font-bold text-slate-700 uppercase tracking-wider">
-                Patrons & Chairpersons
+                Patron & Chairpersons
               </h3>
               <div className="h-px bg-slate-200 flex-1"></div>
             </div>
