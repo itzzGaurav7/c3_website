@@ -105,11 +105,7 @@ const Hero = () => {
 
               <div className="h-1 w-20 md:w-24 bg-saf-600 mb-6 md:mb-8"></div>
 
-              <p className="text-lg sm:text-xl text-slate-600 mb-8 md:mb-10 max-w-lg leading-relaxed font-light">
-                <span className="font-semibold text-slate-900 border-b-2 border-saf-200">
-                  Bridging the gap between molecular science and industrial application
-                </span>
-              </p>
+              
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8 md:mb-10 max-w-md">
                 <StatusBadge

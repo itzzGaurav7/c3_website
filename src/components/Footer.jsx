@@ -31,11 +31,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
-              International Conference on Chemical Constellation Cheminar.
-              Bridging the gap between molecular science and industrial
-              application.
-            </p>
+    
           </div>
 
           {/* Organizers Column */}
@@ -48,7 +44,7 @@ const Footer = () => {
                 <div className="w-1.5 h-1.5 mt-2 rounded-full bg-saf-500 group-hover:scale-150 transition-transform"></div>
                 <div>
                   <p className="text-slate-200 font-medium group-hover:text-white transition-colors">
-                    NIT Jalandhar
+                    Department of Chemistry,<br/> Dr. B R Ambedkar National Institute of Technology,
                   </p>
                   <p className="text-xs text-slate-500">Punjab, India</p>
                 </div>
