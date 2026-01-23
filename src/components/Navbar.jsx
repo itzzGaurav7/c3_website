@@ -53,7 +53,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-col leading-none">
                       <span className="font-tech font-bold text-slate-900 tracking-tight text-xl md:text-2xl group-hover:text-saf-700 transition-colors">
-                        C³–26
+                        C³–2026
                       </span>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 font-mono group-hover:text-grn-600 transition-colors">
                         NIT Jalandhar

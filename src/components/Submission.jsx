@@ -25,9 +25,6 @@ const Submission = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-saf-600 font-bold tracking-widest text-xs uppercase mb-2 block font-mono">
-              // Paper_Submission
-            </span>
             <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900">
               Call for Abstracts
             </h2>

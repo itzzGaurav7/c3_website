@@ -15,10 +15,7 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="flex items-center gap-3 text-saf-600 font-bold uppercase tracking-widest text-sm font-mono">
-              <Info size={18} />
-              <span>About Conference</span>
-            </div>
+          
             <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
               <span className="text-6xl md:text-7xl block mb-2">About the conference</span>
               <span className="text-2xl md:text-3xl text-saf-600">C³-2026: Next Generation Materials for Energy and Environment</span>
@@ -67,10 +64,7 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6 order-1 md:order-2"
           >
-            <div className="flex items-center gap-3 text-saf-600 font-bold uppercase tracking-widest text-sm font-mono">
-              <Building2 size={18} />
-              <span>Host Institution</span>
-            </div>
+            
             <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
               About NIT Jalandhar
             </h2>

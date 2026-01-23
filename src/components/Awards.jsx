@@ -15,7 +15,7 @@ const Awards = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mx-auto mb-16">
-          The <span className="font-bold text-saf-700">“Best Paper Award”</span> will be given to the presenting author in each track by the committee on the basis of originality, relevance, and presentation.
+          The <span className="font-bold text-saf-700">“Best Paper Award”</span> and <span className="font-bold text-saf-700">“Oral Presentation Awards”</span> will be given to the presenting author in each track by the committee on the basis of originality, relevance, and presentation.
         </p>
 
       </div>

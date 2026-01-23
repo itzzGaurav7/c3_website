@@ -113,9 +113,6 @@ const Timeline = () => {
         
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="text-saf-600 font-bold tracking-widest text-xs uppercase mb-3 block font-mono">
-            // Schedule_Sequence
-          </span>
           <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900">
             Important Dates
           </h2>
