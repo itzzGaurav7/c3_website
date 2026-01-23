@@ -3,7 +3,7 @@ import { AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const FeeTable = () => {
   return (
-    <section id="fees" className="py-20 md:py-32 relative">
+    <section id="fees" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-saf-100/30 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-grn-100/30 rounded-full blur-3xl translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
@@ -26,10 +26,10 @@ const FeeTable = () => {
         {/* Unified Table */}
         <div className="glass-card rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
           <div className="overflow-x-auto"> 
-            <table className="w-full text-left text-slate-700">
+            <table className="w-full text-left text-slate-700 whitespace-nowrap">
                 <thead>
                     <tr className="bg-blu-50/50 border-b border-slate-200 text-blu-900">
-                        <th rowSpan="2" className="p-6 font-bold text-xl font-tech uppercase tracking-wider border-r border-slate-200/50">Participant</th>
+                        <th rowSpan="2" className="p-3 md:p-6 font-bold text-lg md:text-xl font-tech uppercase tracking-wider border-r border-slate-200/50">Participant</th>
                         <th colSpan="2" className="p-4 text-center font-bold text-lg border-b border-slate-200/50 border-r border-slate-200/50 bg-grn-50/30 text-grn-800">
                             Indian (INR)
                         </th>
@@ -47,35 +47,35 @@ const FeeTable = () => {
                 <tbody className="divide-y divide-slate-100 bg-white/40 backdrop-blur-sm">
                     {/* Industrial */}
                     <tr className="hover:bg-white/60 transition-colors">
-                        <td className="p-6 font-bold text-slate-800 text-lg border-r border-slate-100">Industrial</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 6000</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500 border-r border-slate-100">₹ 8000</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 400</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500">$ 450</td>
+                        <td className="p-3 md:p-6 font-bold text-slate-800 text-sm md:text-lg border-r border-slate-100">Industrial</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 6000</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500 border-r border-slate-100">₹ 8000</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 400</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500">$ 450</td>
                     </tr>
                     {/* Faculty/Scientist */}
                     <tr className="hover:bg-white/60 transition-colors">
-                        <td className="p-6 font-bold text-slate-800 text-lg border-r border-slate-100">Faculty/Scientist</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 4000</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500 border-r border-slate-100">₹ 4500</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 400</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500">$ 450</td>
+                        <td className="p-3 md:p-6 font-bold text-slate-800 text-sm md:text-lg border-r border-slate-100">Faculty/Scientist</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 4000</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500 border-r border-slate-100">₹ 4500</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 400</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500">$ 450</td>
                     </tr>
                      {/* Students */}
                     <tr className="hover:bg-white/60 transition-colors">
-                        <td className="p-6 font-bold text-slate-800 text-lg border-r border-slate-100">Students</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 2000</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500 border-r border-slate-100">₹ 2500</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 200</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500">$ 250</td>
+                        <td className="p-3 md:p-6 font-bold text-slate-800 text-sm md:text-lg border-r border-slate-100">Students</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 2000</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500 border-r border-slate-100">₹ 2500</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 200</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500">$ 250</td>
                     </tr>
                     {/* Accompanying Person */}
                     <tr className="hover:bg-white/60 transition-colors">
-                        <td className="p-6 font-bold text-slate-800 text-lg border-r border-slate-100">Accompanying Person</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 1000</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500 border-r border-slate-100">₹ 1200</td>
-                        <td className="p-6 text-center text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 250</td>
-                        <td className="p-6 text-center text-lg font-mono text-slate-500">$ 250</td>
+                        <td className="p-3 md:p-6 font-bold text-slate-800 text-sm md:text-lg border-r border-slate-100">Accompanying Person</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-grn-700 border-r border-slate-100">₹ 1000</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500 border-r border-slate-100">₹ 1200</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono font-medium text-saf-700 border-r border-slate-100">$ 250</td>
+                        <td className="p-3 md:p-6 text-center text-sm md:text-lg font-mono text-slate-500">$ 250</td>
                     </tr>
                 </tbody>
             </table>

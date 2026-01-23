@@ -44,33 +44,33 @@ const Navbar = () => {
               {/* Top Accent Line */}
               <div className="h-1 w-full bg-saf-600"></div>
       
-              <div className="max-w-8xl mx-auto px-4 md:px-6">
+              <div className="w-full px-4 md:px-8">
                 <div className="flex items-center justify-between h-20">
                   
                   {/* Brand */}
-                  <Link to="/" className="flex items-center gap-3 group">
-                    <div className="p-1 bg-white rounded-xl border border-slate-100 transition-all duration-300">
-                      <img src="/uploads/logo.jpeg" alt="Logo" className="w-12 h-12 object-contain" />
+                  <Link to="/" className="flex items-center gap-3 group min-w-0">
+                    <div className="p-1 bg-white rounded-xl border border-slate-100 transition-all duration-300 flex-shrink-0">
+                      <img src="/uploads/logo.jpeg" alt="Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
                     </div>
-                    <div className="flex flex-col leading-none">
-                      <span className="font-tech font-bold text-slate-900 tracking-tight text-xl md:text-2xl group-hover:text-saf-700 transition-colors">
+                    <div className="flex flex-col leading-none min-w-0">
+                      <span className="font-tech font-bold text-slate-900 tracking-tight text-base md:text-xl lg:text-2xl whitespace-nowrap group-hover:text-saf-700 transition-colors">
                         C³–2026
                       </span>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 font-mono group-hover:text-grn-600 transition-colors">
+                      <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500 font-mono group-hover:text-grn-600 transition-colors whitespace-nowrap">
                         NIT Jalandhar
                       </span>
                     </div>
                   </Link>
       
                   {/* Desktop Navigation */}
-                  <nav className="hidden lg:flex items-center gap-1 bg-slate-50/50 p-1.5 rounded-full border border-slate-100">
+                  <nav className="hidden xl:flex items-center gap-0.5 bg-slate-50/50 p-1 rounded-full border border-slate-100">
                     {navLinks.map((link) => (
                       <Link
                         key={link.path}
                         to={link.path}
                         onMouseEnter={() => setActiveTab(link.path)}
                         onMouseLeave={() => setActiveTab(location.pathname)}
-                        className={`relative px-5 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide transition-all flex items-center gap-2 ${
+                        className={`relative px-3 py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs 2xl:text-sm font-bold uppercase tracking-wide transition-all flex items-center gap-1.5 2xl:gap-2 ${
                           activeTab === link.path 
                             ? "text-saf-700" 
                             : "text-blu-900/70 hover:text-grn-700"
@@ -114,7 +114,7 @@ const Navbar = () => {
       
                     <button
                       onClick={() => setIsMobileOpen(!isMobileOpen)}
-                      className="lg:hidden p-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 hover:bg-saf-50 hover:text-saf-600 transition-colors"
+                      className="xl:hidden p-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 hover:bg-saf-50 hover:text-saf-600 transition-colors"
                     >
                       {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -131,7 +131,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="fixed inset-x-0 top-20 z-40 bg-white border-b border-slate-200 shadow-xl lg:hidden overflow-hidden"
+                  className="fixed inset-x-0 top-20 z-40 bg-white border-b border-slate-200 shadow-xl xl:hidden overflow-y-auto max-h-[calc(100vh-5rem)]"
                 >
                   <div className="p-4 space-y-2">
                     {navLinks.map((link) => (

@@ -16,9 +16,9 @@ const About = () => {
             className="space-y-6"
           >
           
-            <h2 className="font-tech text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-              <span className="text-6xl md:text-7xl block mb-2">About the conference</span>
-              <span className="text-2xl md:text-3xl text-saf-600">C³-2026: Next Generation Materials for Energy and Environment</span>
+            <h2 className="font-tech text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+              <span className="text-4xl md:text-7xl block mb-2">About the conference</span>
+              <span className="text-xl md:text-3xl text-saf-600">C³-2026: Next Generation Materials for Energy and Environment</span>
             </h2>
             <div className="prose prose-lg text-slate-600 leading-relaxed text-justify">
               <p>
