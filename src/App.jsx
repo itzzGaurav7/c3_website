@@ -14,6 +14,7 @@ import Awards from "./components/Awards";
 import Reach from "./components/Reach";
 import Privacy from "./components/Privacy";
 import Terms from "./components/Terms";
+import Sponsors from "./components/Sponsors";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/committee" element={<Committee />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/reach" element={<Reach />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/submission" element={<Submission />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

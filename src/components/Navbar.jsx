@@ -33,6 +33,7 @@ const Navbar = () => {
     { path: "/committee", name: "Team", icon: Users },
     { path: "/awards", name: "Awards", icon: Trophy },
     { path: "/reach", name: "Reach", icon: MapPin },
+    { path: "/sponsors", name: "Sponsors", icon: Hexagon },
   ];
 
   return (
@@ -43,7 +44,7 @@ const Navbar = () => {
               {/* Top Accent Line */}
               <div className="h-1 w-full bg-saf-600"></div>
       
-              <div className="max-w-7xl mx-auto px-4 md:px-6">
+              <div className="max-w-8xl mx-auto px-4 md:px-6">
                 <div className="flex items-center justify-between h-20">
                   
                   {/* Brand */}
