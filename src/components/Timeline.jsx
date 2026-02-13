@@ -4,14 +4,14 @@ import { Calendar, FileCheck, Ticket, Flag, ArrowDown } from 'lucide-react';
 
 const events = [
   { 
-    date: 'Feb 10, 2026', 
+    date: 'Feb 20, 2026', 
     title: 'Abstract Submission', 
     desc: 'Submission portal closes for all tracks.',
     icon: FileCheck,
     status: 'completed'
   },
   { 
-    date: 'Feb 20, 2026', 
+    date: 'Feb 25, 2026', 
     title: 'Acceptance Notification', 
     desc: 'Authors will be notified via email.',
     icon: Calendar,
