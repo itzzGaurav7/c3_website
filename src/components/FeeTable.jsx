@@ -82,29 +82,53 @@ const FeeTable = () => {
           </div>
         </div>
 
-        {/* Note Footer */}
-         <div className="mt-8 grid md:grid-cols-2 gap-6">
+        {/* Notes & Account Details */}
+        <div className="mt-10 grid md:grid-cols-5 gap-8 items-start">
+
+          {/* Notes - Left Column */}
+          <div className="md:col-span-3 space-y-3">
             <div className="flex gap-4 items-start group p-4 rounded-2xl hover:bg-white/50 transition-colors">
-               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors">
+               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors shrink-0">
                   <CheckCircle2 size={18} />
                </div>
                <p className="leading-relaxed text-slate-600">Registration includes access to all technical sessions and conference kit.</p>
             </div>
-            
             <div className="flex gap-4 items-start group p-4 rounded-2xl hover:bg-white/50 transition-colors">
-               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors">
+               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors shrink-0">
                   <CheckCircle2 size={18} />
                </div>
                <p className="leading-relaxed text-slate-600">Lunch and High-Tea will be provided during conference days (April 03-04) at the venue.</p>
             </div>
-            
             <div className="flex gap-4 items-start group p-4 rounded-2xl hover:bg-white/50 transition-colors">
-               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors">
+               <div className="mt-1 p-2 rounded-full bg-grn-100 text-grn-600 group-hover:bg-grn-500 group-hover:text-white transition-colors shrink-0">
                   <CheckCircle2 size={18} />
                </div>
                <p className="leading-relaxed text-slate-600">On-spot registration is subject to availability and will incur higher charges.</p>
             </div>
-         </div>
+          </div>
+
+          {/* Account Details - Right Column */}
+          <div className="md:col-span-2 glass-card rounded-2xl border border-blu-200/60 shadow-lg p-5 md:p-6 bg-blu-50/30">
+            <h3 className="font-tech text-lg md:text-xl font-bold text-blu-950 tracking-tight mb-4 pb-3 border-b border-blu-200/40">
+              Account Details for Fee Submission
+            </h3>
+            <div className="space-y-3 text-sm md:text-base">
+              <div className="flex flex-col gap-0.5">
+                <span className="font-semibold text-slate-400 uppercase tracking-wider text-xs">Account Name</span>
+                <span className="font-bold text-slate-800 font-mono text-base md:text-lg">NITJ CCE</span>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <span className="font-semibold text-slate-400 uppercase tracking-wider text-xs">Account Number</span>
+                <span className="font-bold text-slate-800 font-mono text-base md:text-lg">50100324249116</span>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <span className="font-semibold text-slate-400 uppercase tracking-wider text-xs">IFSC Code</span>
+                <span className="font-bold text-slate-800 font-mono text-base md:text-lg">HDFC0000046</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </section>
