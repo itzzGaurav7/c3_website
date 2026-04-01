@@ -126,6 +126,16 @@ const Hero = () => {
                 </button>
 
                 <a
+                  href="/uploads/Schedule%20CCC%202026-Final-2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-8 py-4 w-full bg-saf-100 border border-saf-200 text-saf-800 rounded-xl font-tech font-bold shadow-sm hover:bg-saf-200 hover:shadow-md transition-all">
+                    View Schedule
+                  </button>
+                </a>
+
+                <a
                   href="/c3-2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
